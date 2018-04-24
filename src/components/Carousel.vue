@@ -11,16 +11,13 @@ export default {
     return {
       items: [
         {
-          src: '/static/img/car1.jpg'
+          src: '/static/img/carousel1.jpeg'
         },
         {
-          src: '/static/img/car2.jpg'
+          src: '/static/img/carousel2.jpg'
         },
         {
-          src: '/static/img/car3.jpg'
-        },
-        {
-          src: '/static/img/car4.jpg'
+          src: '/static/img/carousel3.jpeg'
         }
       ]
     }
