@@ -3,6 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <ToolBar/>
     <Carousel/>
+    <Backker/>
     <Footer/>
     <!-- <HelloWorld/> -->
     <router-view/>
@@ -11,7 +12,7 @@
 </template>
 
 <script>
-// import Backker from '@/components/Backker.vue'
+import Backker from '@/components/Backker.vue'
 import HelloWorld from '@/components/HelloWorld'
 import ToolBar from '@/components/ToolBar'
 import Carousel from '@/components/Carousel.vue'
@@ -19,7 +20,7 @@ import Footer from '@/components/Footer.vue'
 export default {
   components:
   {
-    // Backker,
+    Backker,
     HelloWorld,
     ToolBar,
     Carousel,
