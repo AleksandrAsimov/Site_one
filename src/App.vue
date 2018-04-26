@@ -21,6 +21,9 @@ import HelloWorld from '@/components/HelloWorld'
 import ToolBar from '@/components/ToolBar'
 import Carousel from '@/components/Carousel'
 import Footer from '@/components/Footer'
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import { faSpinner } from '@fortawesome/fontawesome-free-solid'
 export default {
   components:
   {
