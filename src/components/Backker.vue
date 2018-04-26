@@ -113,9 +113,10 @@
  </v-layout>
   </v-parallax>
 </section>
+<!-- --------------------------------  DRIVE YOUR BUSINESS EFFICIENTLY  ---------------------------- -->
 <section>
   <v-container  grid-list-xl text-xs-center>
-      <v-layout class="white" row>
+      <v-layout  class="white" row>
         <v-flex xs6 >
             <v-card-text  class="text-sm-left">
               <h1>DRIVE YOUR BUSINESS EFFICIENTLY</h1>
@@ -127,7 +128,7 @@
                 <br><br><b>ROBUST</b><br><br>
                 Robust and Stable SASS based solution built on Microsoft .NET and Oracle MySQl
                 <br><br><b>ON CLOUD</b><br><br>
-                Scalable Cloud Solution with named user licenses.
+                Scalable Cloud Solution with named user licenses.<br><br><br><br>
               </p>
             </v-card-text>
         </v-flex>
@@ -139,18 +140,33 @@
       </v-layout>
     </v-container>
 </section>
+<!-- -------------------------------- OUR WORKS  ---------------------------- -->
 <section>
-  
+  <v-container  grid-list-md text-xs-center>
+    <v-layout class="white" row wrap >
+<v-flex xs6>
+      <v-card-text  class="text-sm-left">
+        <h1>OUR WORKS</h1>
+        <hr color="yellow" width="250" size="7" />
+      </v-card-text>
+    </v-flex>
+      <v-flex xs6  align-center ><br>
+        <v-btn flat >ALL</v-btn>
+        <v-btn flat >CORPORATE</v-btn>
+        <v-btn flat >RESTAURANT</v-btn>
+        <v-btn flat >OTHERS</v-btn>
+  </v-flex>
+</v-layout>
+</v-container>
 </section>
 </v-content >
- </v-app>
- </template>
+</v-app>
+</template>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
 <script>
 export default{
-    name: 'backker',
    data () {
      return {
        title: 'Your Logo'

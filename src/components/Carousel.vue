@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'carousel',
   data () {
     return {
       items: [

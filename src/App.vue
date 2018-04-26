@@ -4,6 +4,8 @@
     <ToolBar/>
     <Carousel/>
     <Backker/>
+    <SomeWorks/>
+    <ContactWithUs/>
     <Footer/>
     <!-- <HelloWorld/> -->
     <router-view/>
@@ -12,14 +14,18 @@
 </template>
 
 <script>
+import ContactWithUs from '@/components/ContactWithUs'
+import SomeWorks from '@/components/SomeWorks'
 import Backker from '@/components/Backker.vue'
 import HelloWorld from '@/components/HelloWorld'
 import ToolBar from '@/components/ToolBar'
-import Carousel from '@/components/Carousel.vue'
-import Footer from '@/components/Footer.vue'
+import Carousel from '@/components/Carousel'
+import Footer from '@/components/Footer'
 export default {
   components:
   {
+    ContactWithUs,
+    SomeWorks,
     Backker,
     HelloWorld,
     ToolBar,
