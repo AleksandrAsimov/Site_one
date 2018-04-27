@@ -1,5 +1,5 @@
 <template>
-  <div  id="app">
+  <div  id="app" >
     <!-- <img src="./assets/logo.png"> -->
     <ToolBar/>
     <Carousel/>
