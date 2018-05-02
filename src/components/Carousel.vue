@@ -1,7 +1,9 @@
 <template>
+<div id="carousel">
   <v-carousel  hide-controls hide-delimiters>
-    <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i"></v-carousel-item>
+    <v-carousel-item  v-for="(item,i) in items" :src="item.src" :key="i"></v-carousel-item>
   </v-carousel>
+</div>
 </template>
 
 <script>
@@ -23,3 +25,6 @@ export default {
   }
 }
 </script>
+<style>
+
+</style>

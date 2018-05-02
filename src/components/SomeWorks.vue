@@ -49,7 +49,10 @@
 export default{
   data () {
     return {
-      show1: true,show2: false,show3: false,show4: false,
+      show1: true,
+      show2: false,
+      show3: false,
+      show4: false,
       items1: [
         {
           src: '/static/img/works/orange.png'
@@ -94,58 +97,59 @@ export default{
           src: '/static/img/works/goldenviewproperties.png'
         }
       ],
-        items2: [
-          {
-            src: '/static/img/works/orange.png'
-          },
-          {
-            src: '/static/img/works/new_east.png'
-          },
-          {
-            src: '/static/img/works/victory.png'
-          },
-          {
-            src: '/static/img/works/phytoscience.png'
-          }
-        ],
-          items3: [
-          {
-            src: '/static/img/works/nomnom.png'
-          },
-          {
-            src: '/static/img/works/santacruzj.png'
-          },
-          {
-            src: '/static/img/works/800thali.png'
-          },
-          {
-            src: '/static/img/works/fruitmonsters.png'
-          },
-          {
-            src: '/static/img/works/homemade.png'
-          },
-          {
-            src: '/static/img/works/dongiovannis.png'
-          }
-        ],
-        items4: [
-          {
-            src: '/static/img/works/first_source.png'
-          },
-          {
-            src: '/static/img/works/royal_presentations.png'
-          },
-          {
-            src: '/static/img/works/zaiyna.png'
-          },
-          {
-            src: '/static/img/works/goldenviewproperties.png'
-          }
-        ]
+      items2: [
+        {
+          src: '/static/img/works/orange.png'
+        },
+        {
+          src: '/static/img/works/new_east.png'
+        },
+        {
+          src: '/static/img/works/victory.png'
+        },
+        {
+          src: '/static/img/works/phytoscience.png'
+        }
+      ],
+      items3: [
+        {
+          src: '/static/img/works/nomnom.png'
+        },
+        {
+          src: '/static/img/works/santacruzj.png'
+        },
+        {
+          src: '/static/img/works/800thali.png'
+        },
+        {
+          src: '/static/img/works/fruitmonsters.png'
+        },
+        {
+          src: '/static/img/works/homemade.png'
+        },
+        {
+          src: '/static/img/works/dongiovannis.png'
+        }
+      ],
+      items4: [
+        {
+          src: '/static/img/works/first_source.png'
+        },
+        {
+          src: '/static/img/works/royal_presentations.png'
+        },
+        {
+          src: '/static/img/works/zaiyna.png'
+        },
+        {
+          src: '/static/img/works/goldenviewproperties.png'
+        }
+      ]
     }
   }
-  }
-  </script>
+}
+</script>
 
-  <style>
-  </style>
+<style>
+
+</style>

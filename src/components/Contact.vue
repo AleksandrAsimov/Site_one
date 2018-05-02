@@ -6,7 +6,7 @@
       <v-spacer></v-spacer>
     </v-toolbar>
 
-    <v-layout justify-center align-start pl-5 text-xs-center class="white" row wrap>
+    <v-layout  align-start justify-center pl-5 text-xs-center dark row wrap>
       <v-flex class="black--text" xs12 >
           <v-card-text   class="text-sm-left">
             <h1 >LET'S GET TOGETHER</h1><br>
@@ -17,31 +17,32 @@
         <v-card-text class="text-sm-left" id="firstpar">
         We are good people and are easy to work with. <br>Share your requirements with us and get a free consultation.
         </v-card-text>
-        <v-card-text class="text-sm-left" id="secondpar">
+        <v-card flat class="text-sm-left" id="secondpar">
           ADDRESS<br>
           #1402, Level 14, Lathifa Tower, Sheikh Zayed Road<br>
           <br>
           PO BOX. 40375, Dubai, U.A.E<br>
           <br><br>
-          GENERAL ENQUIRIES<br>
-          info@rightsolutions.ae<br>
+          GENERAL ENQUIRIES<br><br>
+          <v-icon size="16" class="fas fa-envelope"></v-icon>  info@rightsolutions.ae<br>
           <br><br>
-          CALL US<br>
-          Mobile: +971 55 282 5474<br>
-        </v-card-text>
+          CALL US<br><br>
+          <v-icon size="16" class="fas fa-mobile-alt"></v-icon>  Mobile: +971 55 282 5474<br>
+        </v-card>
       </v-flex>
       <v-flex  md6>
-        <v-card-text  id="thirdpar">
-          +971 55 282 5474   |    info@rightsolutions.io
-        </v-card-text>
-        <v-form v-model="valid" ref="form" lazy-validation>
-   <v-text-field  label="Name" v-model="name" :rules="nameRules" :counter="10" required></v-text-field>
-   <v-text-field label="E-mail" v-model="email" :rules="emailRules" required></v-text-field>
-   <v-select label="Item" v-model="select" :items="items" :rules="[v => !!v || 'Item is required']" required></v-select>
-   <v-checkbox label="Do you agree?" v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" required></v-checkbox>
-   <v-btn   @click="submit" :disabled="!valid" > submit </v-btn>
-   <v-btn @click="clear">clear</v-btn>
- </v-form>
+        <v-card flat id="thirdpar">
+        <v-icon size="30" class="fas fa-mobile-alt"></v-icon>  +971 55 282 5474   |   <v-icon size="30" class="fas fa-envelope"></v-icon> info@rightsolutions.io
+        </v-card>
+        <v-form id="fourthpar" v-model="valid" ref="form" lazy-validation>
+    <v-text-field label="YOUR NAME" v-model="name" :rules="nameRules" :counter="10" required></v-text-field>
+    <v-text-field  label="YOUR E-MAIL" v-model="email" :rules="emailRules" required></v-text-field>
+      <v-text-field label="YOUR CONTECT NUMBER" required></v-text-field>
+    <v-select  label="WHAT ARE U INTERESING IN?" v-model="select" :items="items" :rules="[v => !!v || 'Item is required']"></v-select>
+    <v-text-field label="YOUR MESSAGE" ></v-text-field>
+    <v-checkbox label="Do you agree?" v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" required></v-checkbox>
+    <v-btn @click="submit" :disabled="!valid">submit</v-btn>
+  </v-form>
       </v-flex>
     </v-layout>
       <v-footer height="auto" class="grey darken-4">
@@ -66,25 +67,46 @@
 </template>
 
 <script>
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import { faSpinner } from '@fortawesome/fontawesome-free-solid'
 import axios from 'axios'
 export default{
   data () {
     return {
       valid: true,
-      name: '',
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters'
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-      ],
-      select: null,
-      items: ['Item 1', 'Item 2','Item 3','Item 4'],
-      checkbox: false,
+        name: '',
+        nameRules: [
+          v => !!v || 'Name is required',
+          v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+        ],
+        email: '',
+        emailRules: [
+          v => !!v || 'E-mail is required',
+          v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+        ],
+        select: null,
+        items: [
+          'Item 1',
+          'Item 2',
+          'Item 3',
+          'Item 4'
+        ],
+        checkbox: false,
       icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin']
+    }
+  },
+  methods: {
+    submit () {
+      if (this.$refs.form.validate()) {
+        // Native form submission is not yet supported
+        axios.post('/api/submit', {
+          name: this.name,
+          email: this.email,
+          select: this.select,
+          checkbox: this.checkbox
+        })
+      }
     }
   }
 }
@@ -102,11 +124,24 @@ export default{
 #firstpar{
   font-size: 25px;
   color: grey;
+  padding-left: 50px;
+}
+#thirdpar{
+  padding-top: 50px;
+  font-size: 24px;
 }
 #secondpar{
   font-size: 14px;
   color: grey;
   padding-top: 100px;
   padding-bottom: 200px;
+  padding-left: 50px;
+}
+#fourthpar{
+  padding-top: 150px;
+  padding-right: 30px;
+}
+h1{
+  font-size: 40px;
 }
 </style>

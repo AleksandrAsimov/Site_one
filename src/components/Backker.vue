@@ -35,8 +35,8 @@
   </v-card-text>
   <v-layout row wrap   justify-space-center >
 <v-flex  md4 pa-5 v-for="card in cards" :key="card">
-<v-card  class="black">
-  <v-card-text >
+<v-card  class="white">
+  <v-card-text id="cardtext" class="grey--text" >
     <v-icon size="40" color="amber accent-2">{{card.icon}}</v-icon>
 <p>
   <br><b>{{card.title}}</b><br><br>{{card.text}}
@@ -145,5 +145,11 @@ p{
 }
 h1 {
    font-size: 30pt;
+  }
+  b{
+    color: black;
+  }
+  #cardtext{
+    border: 5px solid #fdd947;
   }
 </style>
