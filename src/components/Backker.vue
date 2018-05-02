@@ -35,7 +35,7 @@
   </v-card-text>
   <v-layout row wrap   justify-space-center >
 <v-flex  md4 pa-5 v-for="card in cards" :key="card">
-<v-card  flat>
+<v-card  class="black">
   <v-card-text >
     <v-icon size="40" color="amber accent-2">{{card.icon}}</v-icon>
 <p>
@@ -73,8 +73,8 @@
       </v-layout>
 </section>
 <!-- -------------------------------- OUR WORKS  ---------------------------- -->
-<section>
-  <v-container  grid-list-md text-xs-center>
+<!-- <section> -->
+  <!-- <v-container  grid-list-md text-xs-center>
     <v-layout class="white" row wrap >
 <v-flex class="black--text" xs6>
       <v-card-text  class="text-sm-left">
@@ -89,8 +89,8 @@
         <v-btn flat >OTHERS</v-btn>
   </v-flex>
 </v-layout>
-</v-container>
-</section>
+</v-container> -->
+<!-- </section> -->
 </v-content >
 
 </template>
@@ -115,7 +115,7 @@ export default{
          {
            icon:'fas fa-shopping-cart',
            title: 'WEB DESIGNING',
-           text:'Go Online! Sell more to customers. Eighty percent of the web population has made a purchase online.'
+             text:'Go Online! Sell more to customers. Eighty percent of the web population has made a purchase online.'
          },
          {
            icon:'fas fa-code',

@@ -4,22 +4,24 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 // import HelloWorld from '@/components/HelloWorld'
-// import ToolBar from '@/components/ToolBar'
+import Contact from '@/components/Contact'
+import Index from '@/components/Index'
+// import App from '../App'
 
 Vue.use(Vuetify)
 Vue.use(Router)
 
 export default new Router({
-//   routes: [
-//     {
-//       path: '/toolbar',
-//       name: 'ToolBar',
-//       component: ToolBar
-//     },
-//     {
-//       path: '/',
-//       name: 'HelloWorld',
-//       component: HelloWorld
-//     }
-//   ]
+  routes: [
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
+    }
+  ]
 })
