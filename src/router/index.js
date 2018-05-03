@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-// import HelloWorld from '@/components/HelloWorld'
+import ConfirmW from '@/components/ConfirmW'
 import Contact from '@/components/Contact'
 import Index from '@/components/Index'
 // import App from '../App'
@@ -22,6 +22,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/confirm',
+      name: 'ConfirmW',
+      component: ConfirmW
     }
   ]
 })

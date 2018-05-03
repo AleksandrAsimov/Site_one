@@ -41,7 +41,17 @@
     <v-select  label="WHAT ARE U INTERESING IN?" v-model="select" :items="items" :rules="[v => !!v || 'Item is required']"></v-select>
     <v-text-field label="YOUR MESSAGE" ></v-text-field>
     <v-checkbox label="Do you agree?" v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" required></v-checkbox>
-    <v-btn @click="submit" :disabled="!valid">submit</v-btn>
+<v-btn  class="black--text"   @click="submit" :disabled="!valid" color="blue-grey lighten-2" @click.native="dialog = true" >submit</v-btn>
+<v-btn  class="black--text"  @click="submit" :disabled="!valid" color="blue-grey lighten-2" to="/confirm" >submit</v-btn>
+<v-dialog v-model="dialog"   max-width="550">
+         <v-layout  justify-center align-center class="white">
+     <v-card flat  >
+       <img src="/static/img/confirmp.png" height="400">
+       <v-card-title  class="black--text"><h2>Your Message successfully sent</h2></v-card-title>
+         <v-btn color="black" class="white--text" to="/">Beck to star page</v-btn>
+     </v-card>
+     </v-layout>
+   </v-dialog>
   </v-form>
       </v-flex>
     </v-layout>
@@ -74,6 +84,7 @@ import axios from 'axios'
 export default{
   data () {
     return {
+      dialog: false,
       valid: true,
         name: '',
         nameRules: [
